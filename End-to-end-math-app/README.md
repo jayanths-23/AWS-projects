@@ -1,4 +1,4 @@
-#☁️ End-to-End Math Web App
+# End-to-End Math Web App
 
 Serverless on AWS | API-Driven | Cloud-Native
 
