@@ -9,7 +9,7 @@ The frontend sends user input to a REST API, and the backend computes and return
 
 Built to demonstrate cloud architecture, serverless computing, and secure AWS integration.
 
-🏗️ Architecture
+# 🏗️ Architecture
 User
  ↓
 AWS Amplify (Frontend)
@@ -20,7 +20,7 @@ AWS Lambda (Compute)
  ↓
 DynamoDB (Optional Storage)
 
-⚙️ Tech Stack
+# ⚙️ Tech Stack
 
 Frontend: HTML, JavaScript, AWS Amplify
 
@@ -32,7 +32,7 @@ Database: DynamoDB (Optional)
 
 Security: IAM, CORS
 
-✨ Features
+# ✨ Features
 
 Real-time baseⁿ calculation
 
@@ -40,9 +40,8 @@ Fully serverless & scalable
 
 Secure API with IAM roles
 
-Optional calculation history storage
 
-🛠️ How It Works
+# 🛠️ How It Works
 
 User enters base & exponent in the web UI
 
@@ -62,7 +61,7 @@ Sample Response:
   "result": 8
 }
 
-🔐 Security
+# 🔐 Security
 
 IAM-based permissions for service access
 
@@ -70,7 +69,7 @@ CORS enabled for controlled frontend communication
 
 No public backend exposure
 
-🌱 Future Enhancements
+# 🌱 Future Enhancements
 
 User login with Amazon Cognito
 
@@ -80,20 +79,13 @@ Support advanced math functions
 
 React frontend with Amplify Hosting
 
-🧠 Skills Demonstrated
+# 🧠 Skills Demonstrated
 
-Serverless Architecture Design
+-Serverless Architecture Design
 
-REST API Development
+-REST API Development
 
-Cloud Security (IAM, CORS)
+-Cloud Security (IAM, CORS)
 
-Full-Stack AWS Deployment
+-Full-Stack AWS Deployment
 
-🔥 Why This Works
-
-This version is:
-✅ Short
-✅ Skimmable
-✅ Technical but clean
-✅ Recruiter-friendly
