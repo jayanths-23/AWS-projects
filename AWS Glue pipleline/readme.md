@@ -10,19 +10,21 @@ To build scalable data pipelines using AWS Glue and understand real-world data e
 
 ---
 
-## 🏗️ Architecture
-S3 (Raw Data)
-↓
-AWS Glue Crawler (Schema Discovery)
-↓
-AWS Glue Data Catalog (Metadata Layer)
-↓
-AWS Glue ETL Jobs (PySpark Transformations)
-↓
-S3 (Processed Data - Parquet)
-↓
-Amazon Athena (Query & Analytics)
+<h2>🏗️ Architecture</h2>
 
+<pre>
+S3 (Raw Data)
+   ↓
+AWS Glue Crawler (Schema Discovery)
+   ↓
+AWS Glue Data Catalog (Metadata Layer)
+   ↓
+AWS Glue ETL Jobs (PySpark Transformations)
+   ↓
+S3 (Processed Data - Parquet)
+   ↓
+Amazon Athena (Query & Analytics)
+</pre>
 ---
 
 ## 🔬 What I Implemented
