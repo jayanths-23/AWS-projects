@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To the Power of Math!</title>
+    <style>
+        /* BODY */
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc, #1fd1f9); /* Blue-Purple-Cyan gradient */
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            animation: backgroundMove 20s ease infinite;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* CONTAINER */
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 50px 40px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 400px;
+        }
+
+        /* HEADER */
+        h1 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            animation: fadeIn 2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* LABELS */
+        label {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        label:hover {
+            color: #ffd700;
+        }
+
+        /* INPUT */
+        input {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px #ffd700;
+        }
+
+        /* BUTTON */
+        button {
+            background: linear-gradient(45deg, #6a11cb, #2575fc); /* New gradient */
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #1fd1f9, #2575fc); /* Hover gradient */
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+
+    <script>
+        // callAPI function remains unchanged
+        var callAPI = (base,exponent)=>{
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var raw = JSON.stringify({"base":base,"exponent":exponent});
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            fetch("https://i5ass56xqg.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>TO THE POWER OF MATH!</h1>
+        <form>
+            <label>Base number:</label>
+            <input type="text" id="base" placeholder="Enter base">
+            <label>...to the power of:</label>
+            <input type="text" id="exponent" placeholder="Enter exponent">
+            <button type="button" onclick="callAPI(document.getElementById('base').value,document.getElementById('exponent').value)">CALCULATE</button>
+        </form>
+    </div>
+</body>
+</html>
