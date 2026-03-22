@@ -60,6 +60,8 @@ AWS Glue • PySpark • S3 • Athena • ETL Pipelines • Data Lakes • Clou
 
 ## 🎥 Demo
 
-Each lab includes a short demo video (2–3 mins) showing execution and results.
+Each lab includes a short demo video (2–3 mins) showing execution and results
+
+View here - https://drive.google.com/drive/folders/1TUZSzzJ_UG9sp0w0sd4_cGeAJOUk63by?usp=sharing
 
 
